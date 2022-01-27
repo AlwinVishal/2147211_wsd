@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="Display Cookies" onclick="dispaycookies()"> <br>
+    <input type="button" value="Create Cookie 1" onclick="createcookie1()">
+    <input type="button" value="Create Cookie 2" onclick="createcookie2()"> <br>
+    <input type="button" value="delete Cookie 1" onclick="deletecookie1()">
+    <input type="button" value="delete Cookie 2" onclick="deletecookie2()"> <br><br>
+    
+    <script>
+        
+        function dispaycookies() 
+        {
+            var fname=getCookie("firstname");
+            if (fname==null) {fname="";}
+            if (fname!="") {fname="firstname="+fname;}
+            var lname=getCookie("lastname");
+            if (lname==null) {lname="";}
+            if (lname!="") {lname="lastname="+lname;}
+            alert (fname + " " + lname);
+        }
+        function getCookie(name) 
+        {
+            var nameEQ = name + "=";
+            //alert(document.cookie);
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) 
+            {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
+            }
+        }
+
+        function createcookie1()
+        {
+            document.cookie="firstname=Mani;expires=Wed, 11 Dec 2022 1:00:00 GMT";
+        }
+        function createcookie2()
+        {
+            document.cookie="lastname=Bharathy;expires=Wed, 11 Dec 2022 1:00:00 GMT";
+        }
+        function deletecookie1()
+        {
+            document.cookie="firstname=;expires=Thu, 01 Jan 1970";
+        }
+        function deletecookie2()
+        {
+            document.cookie="lastname=;expires=Thu, 01 Jan 1970";
+        }
+    </script>
+</body>
+</html>
