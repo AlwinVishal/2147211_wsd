@@ -33,9 +33,9 @@ http.createServer(function(req, res) {
         res.end();
     
     }
-    else if (url === '/appsssss') {
-        console.log("welcome to our app ");
-        res.write(' Welcome to our app');
+    else if (url === '/website') {
+        console.log("welcome to our website");
+        res.write(' Welcome to our website');
         res.end();
     } 
     else {
