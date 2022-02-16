@@ -27,13 +27,13 @@ http.createServer(function(req, res) {
         res.write(' data loaded');
         res.end();
 
-    } else if (url === '/about') {
+    } else if (url === '/train') {
         console.log("Train management ");
         res.write('Train management');
         res.end();
     
     }
-    else if (url === '/contact') {
+    else if (url === '/appsssss') {
         console.log("welcome to our app ");
         res.write(' Welcome to our app');
         res.end();
