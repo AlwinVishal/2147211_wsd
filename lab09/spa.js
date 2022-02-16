@@ -31,16 +31,16 @@ app.controller('FirstController', function($scope) {
 
 
 app.controller('SecondController', function($scope, $http) {
-    $http.get('https://raw.githubusercontent.com/Joseph-k-iype/html/master/lab8/sample.json')
+    $http.get('https://alwinvishal.github.io/2147211_wsd/lab08/lab08.json')
         .success(function(response) {
-            $scope.names = response.data;
+            $scope.names = response.employees;
         });
 });
 
 app.controller('ThirdController', function($scope, $http) {
-    $http.get('https://raw.githubusercontent.com/Joseph-k-iype/html/master/lab8/sample.json')
+    $http.get('https://alwinvishal.github.io/2147211_wsd/lab08/lab08.json')
         .success(function(response) {
-            $scope.names = response.data;
+            $scope.names = response.employees;
             $scope.rowlimit = 10;
         });
 });

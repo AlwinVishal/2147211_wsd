@@ -53,7 +53,7 @@
             second controller 
         -->
         <script type="text/ng-template" id="manipulate.html">
-            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">USER DETAILS</div>
+            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">Employee Details</div>
 
             <div class="row">
                 <table class="table table-striped">
@@ -62,24 +62,19 @@
                             <th scope="col">
 
                             </th>
-                            <th scope="col">Name<br>
+                            <th scope="col">full_name<br>
 
                             </th>
-                            <th scope="col">Designation<br>
+                            <th scope="col">email<br>
 
                             </th>
-                            <th scope="col">Totalposts<br>
+                            <th scope="col">phone<br>
 
                             </th>
-                            <th scope="col">Address<br>
+                            <th scope="col">designation<br>
 
                             </th>
-                            <th scope="col">Phone<br>
-
-                            </th>
-                            <th scope="col">Salary<br>
-
-                            </th>
+                            <th scope="col">salary<br>
                          
                         </tr>
                     </thead>
@@ -87,12 +82,11 @@
             </div>
             <tr ng-repeat="item in names">
                 <td></td>
-                <td>{{item.Name|uppercase}}</td>
-                <td>{{item.Designation}}</td>
-                <td>{{item.Totalposts}}</td>
-                <td>{{item.Address}}</td>
-                <td>{{item.Phone}}</td>
-                <td>&#x20B9; {{item.Salary}}</td>
+                <td>{{item.full_name|uppercase}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.designation}}</td>
+                <td>&#x20B9; {{item.salary}}</td>
                 <!-- <td>&#x260E; {{item.contact}}</td> -->
             </tr>
             </tr>
@@ -106,7 +100,7 @@
         -->
         <script type="text/ng-template" id="mechanicdata.html">
             <div class="container">
-            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">USER DETAILS</div>
+            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">EMPLOYEE DETAILS</div>
             <div class="row form-group" style="text-align: center">
                 <div class="col-4"></div>
                 <div class="col-4">Search<br><input class="form-control" type="text" placeholder="Search " ng-model="find"></div>
@@ -127,40 +121,35 @@
 
                                 </div>
                             </th>
-                            <th scope="col">Name<br>
+                            <th scope="col">full_name<br>
                                 <input type="text" ng-model="search.Name">
                             </th>
-                            <th scope="col">Designation<br>
+                            <th scope="col">email<br>
                                 <input type="text" ng-model="search.Designation">
                             </th>
-                            <th scope="col">Totalposts<br>
+                            <th scope="col">phone<br>
                                 <input type="text" ng-model="search.Totalposts">
                             </th>
-                            <th scope="col">Address<br>
+                            <th scope="col">designation<br>
                                 <input type="text" ng-model="search.Address">
                             </th>
-                            <th scope="col">Phone<br>
-                                <input type="text" ng-model="search.Phone">
-                            </th>
-                            <th scope="col">Salary<br>
+                            <th scope="col">salary<br>
                                 <input type="text" ng-model="search.Salary">
                             </th>
                        
-
                         </tr>
                     </thead>
                     <tbody>
             </div>
             <tr ng-repeat="item in names|filter:search|filter:find |filter:find2 |limitTo:rowlimit | orderBy:'ID'">
-                <td>{{item.ID}}</td>
-                <td>{{item.Name|uppercase}}</td>
-                <td>{{item.Designation}}</td>
-                <td>{{item.Totalposts}}</td>
-                <td> {{item.Address}}</td>
-                <td>{{item.Phone}}</td>
-                <td>&#x20B9;{{item.Salary}}</td>
-                <!-- <td>&#x260E; {{item.contact}}</td> -->
-            </tr>
+                    <td></td>
+                    <td>{{item.full_name|uppercase}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.designation}}</td>
+                    <td>&#x20B9; {{item.salary}}</td>
+                    <!-- <td>&#x260E; {{item.contact}}</td> -->
+                </tr>
             </tr>
 
             </tbody>
@@ -170,7 +159,7 @@
     </div>
     <!--hyperlinks to load different
 			pages dynamically-->
-    <div class="row" style="text-align: center;font: 30px;color: white; background-color: black;">
+    <div class="row" style="text-align: center;font: 30px;color: rgb(206, 197, 197); background-color: rgb(226, 41, 41);">
         <div class="col-4">
             <a href="#/">ABOUT US</a>
         </div>
